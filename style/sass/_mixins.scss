@@ -1,0 +1,48 @@
+$primary-color: #FF506F;
+$secondary-color: #009c8f;
+$bg-color: #fef5e4;
+$shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+
+@mixin primary-title {
+    font-family: 'Lemonada', cursive;
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: 400;
+
+    @media (max-width: 1600px) {
+        font-size: 30px;
+    }
+
+    @media (max-width: 1200px) {
+        font-size: 25px;
+        line-height: 30px;
+    }
+}
+
+@mixin secondary-title {
+    font-family: 'Lemonada', cursive;
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 400;
+}
+
+@mixin form-button {
+    padding: 5px 20px;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    background-color: transparent;
+    transition: ease .5s all;
+    border-radius: 30px;
+
+    &:hover,
+    &:focus {
+        background-color: $primary-color;
+        box-shadow: 0px 2px 7px $primary-color;
+        color: #ffffff!important;
+        text-decoration: none;
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+}
